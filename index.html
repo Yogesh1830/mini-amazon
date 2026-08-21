@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Amazon - E-Commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">MiniAmazon</div>
+        <button id="cart-toggle-btn" class="cart-btn">🛒 Cart (<span id="cart-count">0</span>)</button>
+    </header>
+
+    <main class="store-container">
+        <!-- Main Products View Section -->
+        <section id="products-view">
+            <h2>Our Featured Products</h2>
+            <div id="product-grid" class="product-grid"></div>
+        </section>
+
+        <!-- Dedicated Cart View Section -->
+        <section id="cart-view" class="cart-view hidden">
+            <h2>Your Shopping Cart</h2>
+            <div id="cart-items-list"></div>
+            <div class="cart-summary">
+                <h3>Total Price: $<span id="cart-total-price">0.00</span></h3>
+                <button id="clear-cart-btn" class="clear-btn">Clear Cart</button>
+                <button id="back-to-store-btn" class="back-btn">Continue Shopping</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Product Details Detail Modal Popup -->
+    <div id="product-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-modal" class="close-btn">&times;</span>
+            <div class="modal-body">
+                <img id="modal-img" src="" alt="Product">
+                <div class="modal-info">
+                    <h2 id="modal-title">Product Name</h2>
+                    <p id="modal-desc">Product Description text goes here.</p>
+                    <p id="modal-price" class="price">$0.00</p>
+                    <button id="modal-add-btn" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
